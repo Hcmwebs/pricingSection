@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 @use '../base/typo' as *;
-@use '../layout/' as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -25,9 +25,3 @@ body {
 }
 
 
-
-@media (min-width: 768px) {
-  .main {
-    flex-direction: row;
-  }
-}

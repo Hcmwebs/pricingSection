@@ -2,10 +2,13 @@
 
 .title {
 
+  padding: 1rem 0;
+  @include flex(column, center, center);
+
   small {
     font-size: 1.6rem;
     line-height: 2.1rem;
-    margin-bottom: 1rem;
+    text-align: left;
   }
 
   h1 {
@@ -13,6 +16,5 @@
     font-weight: 600;
     font-size: 2rem;
     line-height: 2.7rem;
-    text-align: left;
   }
 }
