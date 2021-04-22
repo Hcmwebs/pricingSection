@@ -1,0 +1,8 @@
+@use '../abstracts/'as *;
+@use '../components/' as *;
+
+.main {
+  padding: 2rem;
+  @include flex(column, center, center);
+  background-color: #fff;
+}

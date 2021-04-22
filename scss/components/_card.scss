@@ -1,0 +1,10 @@
+@use '../abstracts/'as *;
+
+.card {
+  width: 300px;
+  min-height: 610px;
+  margin: 0.5rem;
+  background-color: $cardBgColor;
+  border: none;
+  border-radius: 1rem;
+}

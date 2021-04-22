@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+
+.header {
+  width: 26%;
+  margin: 0 auto 2rem auto;
+  padding: 2rem 0;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  @include flex(column, center, center);
+  background-color: $headerBgColor;
+  position: fixed;
+  top: 0;
+}
