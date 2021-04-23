@@ -1,7 +1,7 @@
 @use '../abstracts/'as *;
 
 @media (min-width: 768px) {
-  .main {
+  .main__body {
     flex-direction: row;
   }
 }

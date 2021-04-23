@@ -10,6 +10,5 @@
   text-align: center;
   @include flex(column, center, center);
   background-color: $headerBgColor;
-  position: fixed;
-  top: 0;
+
 }

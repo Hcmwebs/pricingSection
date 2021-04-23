@@ -1,10 +1,71 @@
 @use '../abstracts/'as *;
 
 .card {
-  width: 300px;
+  width: 320px;
   min-height: 610px;
   margin: 0.5rem;
-  background-color: $cardBgColor;
+  padding: 0 2rem;
   border: none;
   border-radius: 1rem;
+  background-color: $cardBgColor;
+  @include flex(column,space-between, center);
+  transition: all 0.5s ease-in-out;
+
+  &__header{
+    margin:2rem auto;
+    padding: 0.8rem 1.6rem;
+    @include flex(column,center, center);
+
+
+    small{
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h3{
+      font-size: 3rem;
+      font-weight: 600;
+      text-align: center;
+
+      span{
+        font-size: 1.6rem;
+        font-weight: 300;
+      }
+    }
+
+
+  }
+  &__body{
+    width: 80%;
+    @include flex(column, center, center);
+    background-color: #111;
+
+    .heading{
+      width: 100%;
+      padding: 3rem 0;
+      @include flex(row, space-between, center);
+      background-color: #222;
+
+      p{
+        font-size: 2rem;
+        margin: 0 auto;
+        text-align: center;
+
+      }
+      span{
+        font-size: 2rem;
+      }
+
+    }
+
+  }
+
+  &.isActive{
+    transform: scale(1.01) translateY(-1rem);
+    box-shadow: $boxShadow;
+
+  }
+
 }
+

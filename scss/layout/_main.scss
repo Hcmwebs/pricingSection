@@ -2,7 +2,79 @@
 
 
 .main {
+  margin: 2rem auto;
   padding: 2rem;
-  @include flex(column, center, center);
+  @include flex(column, space-between, center);
   background-color: #fff;
+
+  &__header {
+    margin: 2rem auto;
+    padding: 0.8rem 1.6rem;
+    display: block;
+    background-color: #ccc;
+
+    h2{
+      font-size: 3.6rem;
+      font-weight: 600;
+      line-height: 4.9rem;
+      text-align: center;
+      margin-bottom: 1rem ;
+    }
+
+    .toggle{
+      padding: 1rem 0;
+      @include flex(row,center,center);
+      background-color: #ddd;
+
+      p{
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin: 0rem 1rem;
+      }
+
+      &__btn{
+        width: 60px;
+        height: 30px;
+        border:none;
+        outline:none;
+        border-radius:2rem;
+        position: relative;
+        background-color: $headerBgColor;
+        cursor: pointer;
+
+
+
+        div{
+          content:'';
+          width: 30px;
+          height: 30px;
+          margin:0 auto;
+          border-radius:50%;
+          border:none;
+          position: absolute;
+          top:0;
+          right: 50%;
+          bottom: 0;
+          background-color:$textColor;
+          transition: all 0.5s ease-in-out;
+        }
+
+
+        &.isActive{
+          div{
+            right:0;
+          }
+
+
+        }
+
+      }
+
+    }
+  }
+
+  &__body{
+    margin: 2rem auto;
+    @include flex(column,center,center)
+  }
 }
