@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 * {
   margin: 0;
@@ -162,10 +163,10 @@ body {
 }
 .card__header h3 span {
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 600;
 }
 .card__body {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,24 +175,86 @@ body {
 }
 .card__body .heading {
   width: 100%;
-  padding: 3rem 0;
+  padding: 2rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: #222;
 }
 .card__body .heading p {
   font-size: 2rem;
-  margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding: 1.2rem 3.6rem;
+  border: 1px solid #333333;
+  border-radius: 0.4rem;
 }
-.card__body .heading span {
+.card__body .heading p span {
   font-size: 2rem;
+  color: white;
+  text-align: right;
+  margin-left: 2rem;
+}
+.card__body .heading small {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 0.5rem;
+  color: #bc1e36;
+}
+.card__body ul {
+  width: 90%;
+  list-style: none;
+  margin: 2rem auto;
+  background-color: #000;
+}
+.card__body ul li {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: left;
+  display: block;
+  padding: 0.8rem 1.6rem;
+}
+.card__body ul li::before {
+  content: "•";
+  font-weight: 600;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -2rem;
+  padding: 0 0.5rem;
+  color: #bc1e36;
 }
 .card.isActive {
   transform: scale(1.01) translateY(-1rem);
   box-shadow: 0 2px 15px #22262c;
+}
+.card .btn {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.2rem 4.6rem;
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 15px #22262c;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+.card .btn:hover {
+  border: none;
+  background-color: #bc1e36;
+}
+.card .btn.btn--primary {
+  border: none;
+  background-color: #bc1e36;
+  transition: all 0.3s ease-in-out;
+}
+.card .btn.btn--primary:hover {
+  transform: scale(0.95);
+  border: 1px solid white;
+  background-color: transparent;
 }
 
 @media (min-width: 768px) {
